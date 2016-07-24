@@ -7,9 +7,10 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should get home' do
-    get static_pages_home_url
+    get home_url
     assert_response :success
     assert_select 'title', "Home | #{@base_title}"
+    assert_select 'a', 'Play a game'
   end
 
   test 'should get help' do
