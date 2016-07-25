@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cards
   get 'games/index'
   get '/', to: 'static_pages#home', as: 'home'
   get 'static_pages/help'
