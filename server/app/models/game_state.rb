@@ -1,6 +1,9 @@
 class GameState
   def initialize
-    @hands = Array.new(4, Hand.new)
+    @hands = []
+    4.times do |num|
+      @hands << Hand.new("player#{num}")
+    end
     @play_slots = Array.new(4, 0)
   end
 

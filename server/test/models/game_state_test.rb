@@ -18,4 +18,8 @@ class GameStateTest < ActiveSupport::TestCase
       assert_equal(hand.cards.length, 4)
     end
   end
+
+  test 'hands have default player names' do
+    assert_equal(@test_obj.hands[1].player_name, 'player1')
+  end
 end
