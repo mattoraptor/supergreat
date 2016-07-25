@@ -11,7 +11,7 @@ class GameStateTest < ActiveSupport::TestCase
 
   test 'hands have four cards in them' do
     @test_obj.hands.each do |hand|
-      assert_equal(hand.length, 4)
+      assert_equal(hand.cards.length, 4)
     end
   end
 end

@@ -15,8 +15,9 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
 
   test 'should get state' do
     get games_state_url, params: { format: :json }
-    state = JSON.parse(response.body)
-    assert_equal GameState.new.instance_values, state
+    state = response.body
+    expected = ActiveSupport::JSON.encode(GameState.new)
+    assert_equal expected, state
     assert_response :success
   end
 end
