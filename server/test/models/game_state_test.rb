@@ -8,4 +8,10 @@ class GameStateTest < ActiveSupport::TestCase
   test 'new game state has four hands' do
     assert_equal(@test_obj.hands.length, 4)
   end
+
+  test 'hands have four cards in them' do
+    @test_obj.hands.each do |hand|
+      assert_equal(hand.length, 4)
+    end
+  end
 end
