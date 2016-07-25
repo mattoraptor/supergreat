@@ -4,7 +4,6 @@ class GamesController < ApplicationController
 
   def state
     respond_to :json
-    state = GameState.new
-    render json: state
+    render json: GameState.new
   end
 end
