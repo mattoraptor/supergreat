@@ -7,11 +7,11 @@ class PlayableCard
 end
 
 class Hand
-  def initialize(player)
-    @player_name = player
+  def initialize(player_name)
+    @player_name = player_name
     @cards = []
     4.times do |num|
-      @cards << PlayableCard.new(player, num)
+      @cards << PlayableCard.new(player_name, num)
     end
   end
 
