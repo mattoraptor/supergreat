@@ -52,3 +52,11 @@ end
 def resource_tests(resource)
   integration_tests(resource) << controller_test(resource)
 end
+
+guard :teaspoon do
+  # Implementation files
+  watch(%r{^app/assets/javascripts/(.+).js}) { |m| "#{m[1]}_spec" }
+
+  # Specs / Helpers
+  watch(%r{^spec/javascripts/(.*)})
+end
