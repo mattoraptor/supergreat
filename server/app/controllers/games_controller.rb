@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
   def index
+    @state = GameState.new
   end
 
   def state
