@@ -1,58 +1,81 @@
 <% provide(:title, "Playing a game") %>
+<%= javascript_tag "
+	$.get( '/games/state.json', function( data ) {
+		$('\#p1card1').text(data.hands[0].cards[0].id);
+		$('\#p1card2').text(data.hands[0].cards[1].id);
+		$('\#p1card3').text(data.hands[0].cards[2].id);
+		$('\#p1card4').text(data.hands[0].cards[3].id);
+
+		$('\#p2card1').text(data.hands[1].cards[0].id);
+		$('\#p2card2').text(data.hands[1].cards[1].id);
+		$('\#p2card3').text(data.hands[1].cards[2].id);
+		$('\#p2card4').text(data.hands[1].cards[3].id);
+
+		$('\#p3card1').text(data.hands[2].cards[0].id);
+		$('\#p3card2').text(data.hands[2].cards[1].id);
+		$('\#p3card3').text(data.hands[2].cards[2].id);
+		$('\#p3card4').text(data.hands[2].cards[3].id);
+
+		$('\#p4card1').text(data.hands[3].cards[0].id);
+		$('\#p4card2').text(data.hands[3].cards[1].id);
+		$('\#p4card3').text(data.hands[3].cards[2].id);
+		$('\#p4card4').text(data.hands[3].cards[3].id);
+	});
+" %>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-5"></div>
-		<div class="col-md-1"><div class="card">monster area</div></div>
+		<div class="col-md-1"><div id="monster-card" class="card">monster area</div></div>
 		<div class="col-md-5"></div>
 	</div>
 	<div class="row">
 		<div class="col-md-1"></div>
-		<div class="col-md-1"><div class="card">player1card1</div></div>
+		<div class="col-md-1"><div id="p1card1" class="card"></div></div>
 		<div class="col-md-3"></div>
 		<div class="col-md-1"><div class="card">1st position</div></div>
 		<div class="col-md-3"></div>
-		<div class="col-md-1"><div class="card">player2card1</div></div>
+		<div class="col-md-1"><div id="p2card1" class="card"></div></div>
 		<div class="col-md-1"></div>
 	</div>
 	<div class="row">
 		<div class="col-md-1"></div>
-		<div class="col-md-1"><div class="card">player1card2</div></div>
+		<div class="col-md-1"><div id="p1card2" class="card"></div></div>
 		<div class="col-md-3"></div>
 		<div class="col-md-1"><div class="card">2nd position</div></div>
 		<div class="col-md-3"></div>
-		<div class="col-md-1"><div class="card">player2card2</div></div>
+		<div class="col-md-1"><div id="p2card2" class="card"></div></div>
 		<div class="col-md-1"></div>
 	</div>
 	<div class="row">
 		<div class="col-md-1"></div>
-		<div class="col-md-1"><div class="card">player1card3</div></div>
+		<div class="col-md-1"><div id="p1card3" class="card"></div></div>
 		<div class="col-md-3"></div>
 		<div class="col-md-1"><div class="card">1st position</div></div>
 		<div class="col-md-3"></div>
-		<div class="col-md-1"><div class="card">player2card3</div></div>
+		<div class="col-md-1"><div id="p2card3" class="card"></div></div>
 		<div class="col-md-1"></div>
 	</div>
 	<div class="row">
 		<div class="col-md-1"></div>
-		<div class="col-md-1"><div class="card">player1card4</div></div>
+		<div class="col-md-1"><div id="p1card4" class="card"></div></div>
 		<div class="col-md-3"></div>
 		<div class="col-md-1"><div class="card">1st position</div></div>
 		<div class="col-md-3"></div>
-		<div class="col-md-1"><div class="card">player2card4</div></div>
+		<div class="col-md-1"><div id="p2card4" class="card"></div></div>
 		<div class="col-md-1"></div>
 	</div>
 	<br/>
 	<div class="row">
 		<div class="col-md-1"></div>
-		<div class="col-md-1"><div class="card">player3card1</div></div>
-		<div class="col-md-1"><div class="card">player3card2</div></div>
-		<div class="col-md-1"><div class="card">player3card3</div></div>
-		<div class="col-md-1"><div class="card">player3card4</div></div>
+		<div class="col-md-1"><div id="p3card1" class="card"></div></div>
+		<div class="col-md-1"><div id="p3card2" class="card"></div></div>
+		<div class="col-md-1"><div id="p3card3" class="card"></div></div>
+		<div class="col-md-1"><div id="p3card4" class="card"></div></div>
 		<div class="col-md-1"></div>
-		<div class="col-md-1"><div class="card">player4card1</div></div>
-		<div class="col-md-1"><div class="card">player4card2</div></div>
-		<div class="col-md-1"><div class="card">player4card3</div></div>
-		<div class="col-md-1"><div class="card">player4card4</div></div>
+		<div class="col-md-1"><div id="p4card1" class="card"></div></div>
+		<div class="col-md-1"><div id="p4card2" class="card"></div></div>
+		<div class="col-md-1"><div id="p4card3" class="card"></div></div>
+		<div class="col-md-1"><div id="p4card4" class="card"></div></div>
 		<div class="col-md-1"></div>
 	</div>
 </div>
