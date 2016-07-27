@@ -5,6 +5,7 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
     get games_index_url
     assert_response :success
     assert_select 'title', /Playing a game/
+    assigns(:state)
   end
 
   test 'state does not respond to html' do
