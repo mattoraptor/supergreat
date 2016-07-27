@@ -32,5 +32,9 @@ You can auto run tests on file changes by running:
 $ bundle exec guard
 ```
 
+## Sublime Text 3
+I followed some of https://mattbrictson.com/sublime-text-3-recommendations for setting up sublime.
+Especially the linter and the auto-complete everywhere
+
 For more information, see the
 [*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
