@@ -1,14 +1,16 @@
 require 'test_helper'
 
 class PlayableCardTest < ActiveSupport::TestCase
+  def setup
+    @card = PlayableCard.create(name: 'hello')
+  end
+
   test 'initializer sets name' do
-    card = PlayableCard.create(name: 'hello')
-    assert_equal(card.name, 'hello')
+    assert_equal(@card.name, 'hello')
   end
 
   test 'as_json only returns name' do
-    card = PlayableCard.create(name: 'hello')
     expected = { 'name' => 'hello' }
-    assert_equal expected, card.as_json
+    assert_equal expected, @card.as_json
   end
 end
