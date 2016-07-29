@@ -11,6 +11,6 @@ class HandTest < ActiveSupport::TestCase
   end
 
   test 'card ids are generated' do
-    assert_equal(@test_obj.cards[2].id, "#{@player}card2")
+    assert_equal(@test_obj.cards[2].name, "#{@player}card2")
   end
 end

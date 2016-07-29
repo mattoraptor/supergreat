@@ -1,17 +1,9 @@
-class PlayableCard
-  def initialize(player, num)
-    @id = "#{player}card#{num}"
-  end
-
-  attr_reader :id
-end
-
 class Hand
   def initialize(player_name)
     @player_name = player_name
     @cards = []
     4.times do |num|
-      @cards << PlayableCard.new(player_name, num)
+      @cards << PlayableCard.create(name: "#{player_name}card#{num}")
     end
   end
 
