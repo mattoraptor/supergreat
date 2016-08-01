@@ -6,7 +6,7 @@ class PlayerTest < ActiveSupport::TestCase
   end
 
   test 'initializer sets name' do
-    assert_equal(@player.name, 'hello')
+    assert_equal 'hello', @player.name
   end
 
   test 'as_json only returns name' do
@@ -14,7 +14,7 @@ class PlayerTest < ActiveSupport::TestCase
     assert_equal expected, @player.as_json
   end
 
-  test 'new hand generates 4 playable cards' do
+  test 'new player generates 4 playable cards' do
     assert_equal 4, @player.cards.length
   end
 
