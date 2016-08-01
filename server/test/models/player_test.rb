@@ -13,4 +13,12 @@ class PlayerTest < ActiveSupport::TestCase
     expected = { 'name' => 'hello' }
     assert_equal expected, @player.as_json
   end
+
+  test 'new hand generates 4 playable cards' do
+    assert_equal 4, @player.cards.length
+  end
+
+  test 'card ids are generated' do
+    assert_equal 'hellocard2', @player.cards[2].name
+  end
 end
