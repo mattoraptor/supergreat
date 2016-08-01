@@ -1,6 +1,6 @@
 class GameCreator
   def self.build
-    game = Game.create
+    game = Game.first_or_create
     4.times do |num|
       name = "player#{num}"
       player = game.players.create(name: name)
