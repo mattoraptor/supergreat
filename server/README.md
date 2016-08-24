@@ -35,7 +35,7 @@ $ bundle exec guard
 You can run the javascript tests by doing:
 
 ```
-bundle exec teaspoon
+$ bundle exec teaspoon
 ```
 
 ## Sublime Text 3
