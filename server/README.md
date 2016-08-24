@@ -32,6 +32,12 @@ You can auto run tests on file changes by running:
 $ bundle exec guard
 ```
 
+You can run the javascript tests by doing:
+
+```
+bundle exec teaspoon
+```
+
 ## Sublime Text 3
 I followed some of https://mattbrictson.com/sublime-text-3-recommendations for setting up sublime.
 Especially the linter (I want to be idiomatic if possible) and the auto-complete everywhere
