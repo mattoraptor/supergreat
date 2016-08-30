@@ -18,7 +18,7 @@
       <tr>
         <td><%= card.name %></td>
         <td><%= card.character %></td>
-        <td><%= card.card_type %></td>
+        <td><%= card.card_type %><%= image_tag(Card.cardImages[card.card_type]) %></td>
         <td><%= card.effect %></td>
         <td><%= link_to 'Show', card %></td>
         <td><%= link_to 'Edit', edit_card_path(card) %></td>
