@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :card_type %>
-    <%= f.number_field :card_type %>
+    <%= f.select :card_type, options_for_select(Card.cardTypes, card.card_type) %>
   </div>
 
   <div class="field">
