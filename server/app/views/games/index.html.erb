@@ -8,55 +8,67 @@
 	<div class="row">
 		<div class="col-md-1"></div>
 		<div class="col-md-1">
-			<div id="p1card1" class="card" draggable="true" data-player="0" data-card="0">
-				<%= @state.players[0].cards[0].name %>
-			</div>
+			<%= render partial: "player_card", locals: {player: 0, card: 0} %>
 		</div>
 		<div class="col-md-3"></div>
-		<div class="col-md-1"><div id="playslot1" class="card-slot" data-slot="0">1st position</div></div>
+		<div class="col-md-1"><div id="playslot0" class="card-slot" data-slot="0">1st position</div></div>
 		<div class="col-md-3"></div>
-		<div class="col-md-1"><div id="p2card1" class="card" draggable="true"><%= @state.players[1].cards[0].name %></div></div>
+		<div class="col-md-1">
+			<%= render partial: "player_card", locals: {player: 1, card: 0} %>
+		</div>
 		<div class="col-md-1"></div>
 	</div>
 	<div class="row">
 		<div class="col-md-1"></div>
-		<div class="col-md-1"><div id="p1card2" class="card" draggable="true"><%= @state.players[0].cards[1].name %></div></div>
+		<div class="col-md-1">
+			<%= render partial: "player_card", locals: {player: 0, card: 1} %>
+		</div>
 		<div class="col-md-3"></div>
-		<div class="col-md-1"><div id="playslot2" class="card-slot">2nd position</div></div>
+		<div class="col-md-1"><div id="playslot1" class="card-slot" data-slot="1">2nd position</div></div>
 		<div class="col-md-3"></div>
-		<div class="col-md-1"><div id="p2card2" class="card" draggable="true"><%= @state.players[1].cards[1].name %></div></div>
+		<div class="col-md-1">
+			<%= render partial: "player_card", locals: {player: 1, card: 1} %>
+		</div>		
 		<div class="col-md-1"></div>
 	</div>
 	<div class="row">
 		<div class="col-md-1"></div>
-		<div class="col-md-1"><div id="p1card3" class="card" draggable="true"><%= @state.players[0].cards[2].name %></div></div>
+				<div class="col-md-1">
+			<%= render partial: "player_card", locals: {player: 0, card: 2} %>
+		</div>	
 		<div class="col-md-3"></div>
-		<div class="col-md-1"><div id="playslot3" class="card-slot">3rd position</div></div>
+		<div class="col-md-1"><div id="playslot2" class="card-slot" data-slot="2">3rd position</div></div>
 		<div class="col-md-3"></div>
-		<div class="col-md-1"><div id="p2card3" class="card" draggable="true"><%= @state.players[1].cards[2].name %></div></div>
+		<div class="col-md-1">
+			<%= render partial: "player_card", locals: {player: 1, card: 2} %>
+		</div>	
 		<div class="col-md-1"></div>
 	</div>
 	<div class="row">
 		<div class="col-md-1"></div>
-		<div class="col-md-1"><div id="p1card4" class="card" draggable="true"><%= @state.players[1].cards[3].name %></div></div>
+		<div class="col-md-1">
+			<%= render partial: "player_card", locals: {player: 0, card: 3} %>
+		</div>	
 		<div class="col-md-3"></div>
-		<div class="col-md-1"><div id="playslot4" class="card-slot">4th position</div></div>
+		<div class="col-md-1"><div id="playslot3" class="card-slot" data-slot="3">4th position</div></div>
 		<div class="col-md-3"></div>
-		<div class="col-md-1"><div id="p2card4" class="card" draggable="true"><%= @state.players[1].cards[3].name %></div></div>
+		<div class="col-md-1">
+			<%= render partial: "player_card", locals: {player: 1, card: 3} %>
+		</div>	
 		<div class="col-md-1"></div>
 	</div>
 	<br/>
 	<div class="row">
 		<div class="col-md-1"></div>
-		<div class="col-md-1"><div id="p3card1" class="card" draggable="true"><%= @state.players[2].cards[0].name %></div></div>
-		<div class="col-md-1"><div id="p3card2" class="card" draggable="true"><%= @state.players[2].cards[1].name %></div></div>
-		<div class="col-md-1"><div id="p3card3" class="card" draggable="true"><%= @state.players[2].cards[2].name %></div></div>
-		<div class="col-md-1"><div id="p3card4" class="card" draggable="true"><%= @state.players[2].cards[3].name %></div></div>
+		<div class="col-md-1"><%= render partial: "player_card", locals: {player: 2, card: 0} %></div>
+		<div class="col-md-1"><%= render partial: "player_card", locals: {player: 2, card: 1} %></div>
+		<div class="col-md-1"><%= render partial: "player_card", locals: {player: 2, card: 2} %></div>
+		<div class="col-md-1"><%= render partial: "player_card", locals: {player: 2, card: 3} %></div>
 		<div class="col-md-1"></div>
-		<div class="col-md-1"><div id="p4card1" class="card" draggable="true"><%= @state.players[3].cards[0].name %></div></div>
-		<div class="col-md-1"><div id="p4card2" class="card" draggable="true"><%= @state.players[3].cards[1].name %></div></div>
-		<div class="col-md-1"><div id="p4card3" class="card" draggable="true"><%= @state.players[3].cards[2].name %></div></div>
-		<div class="col-md-1"><div id="p4card4" class="card" draggable="true"><%= @state.players[3].cards[3].name %></div></div>
+		<div class="col-md-1"><%= render partial: "player_card", locals: {player: 3, card: 0} %></div>
+		<div class="col-md-1"><%= render partial: "player_card", locals: {player: 3, card: 1} %></div>
+		<div class="col-md-1"><%= render partial: "player_card", locals: {player: 3, card: 2} %></div>
+		<div class="col-md-1"><%= render partial: "player_card", locals: {player: 3, card: 3} %></div>
 		<div class="col-md-1"></div>
 	</div>
 </div>
