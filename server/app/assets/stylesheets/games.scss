@@ -33,3 +33,41 @@ div.card {
 	-moz-user-select: none;
 	user-select: none
 }
+
+div.drop-area {
+	border-style: dashed;
+    border-color: #aaa;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+	background-color: #B5EAAA;
+}
+
+div.card-slot {
+	border-style: dotted;
+	border-width: 1px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	cursor: move;
+	display: block;
+	text-align: center;
+	font-family: helvetica;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	overflow: visible;
+	overflow-x: visible;
+	overflow-y: visible;
+	min-height: 100px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	padding: 2px 4px;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	user-select: none
+}
