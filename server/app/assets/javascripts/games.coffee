@@ -14,8 +14,8 @@ $(document).ready ->
     dimElem = $("#" + data)
     target = $(event.target)
     console.log("from " + data + " to " + target.attr('id'))
-    data = {"player_id":"", "card_id":"", "play_slot_id" : target.attr('id')}
-    console.log(games_play_card_path(data))
+    data = {"player_id":dimElem.attr('data-player'), "card_id":dimElem.attr('data-card'), "play_slot_id" : target.attr('data-slot')}
+    console.log(Routes.games_play_card_path(data))
 
   $('.card').on "dragstart", (event) ->
     dataTransfer = event.originalEvent.dataTransfer
