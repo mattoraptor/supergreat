@@ -38,4 +38,13 @@ class GameTest < ActiveSupport::TestCase
     result = @test_obj.to_dto
     assert_equal expected, result
   end
+
+  test 'playing a card moves it to play slot' do
+    @test_obj.play_card(1, 2, 1)
+    result = @test_obj.card_in_slot 1
+    expected = { 'name' => 'player1card2' }
+    assert_equal expected, result
+    dto = @test_obj.to_dto
+    assert_equal 'player1card2', dto['play_slots'][1]['name']
+  end
 end
