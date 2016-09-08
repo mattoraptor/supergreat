@@ -5,7 +5,7 @@
 $(document).ready ->
   App.gameplayChannel = App.cable.subscriptions.create { channel: "GameplayChannel", room: "game1" },
     received: (data) ->
-      console.log('I got some data: ' + data["body"])
+      console.log('I got some data: ' + JSON.stringify(data['body']))
 
   $('.card-slot').on "dragover", (event) ->
     event.preventDefault()
@@ -14,14 +14,17 @@ $(document).ready ->
     event.preventDefault()
     dataTransfer = event.originalEvent.dataTransfer
     data = dataTransfer.getData("Id")
-    console.log(data)
     dimElem = $("#" + data)
     target = $(event.target)
     console.log("from " + data + " to " + target.attr('id'))
-    data = {"player_id":dimElem.attr('data-player'), "card_id":dimElem.attr('data-card'), "play_slot_id" : target.attr('data-slot')}
-    path = Routes.games_play_card_path(data)
-    App.gameplayChannel.send({body: path})
-    console.log(path)
+    App.gameplayChannel.send({
+      body: {
+        action: "play",
+        player_id: dimElem.attr('data-player'),
+        card_id: dimElem.attr('data-card'),
+        play_slot_id: target.attr('data-slot')
+      }
+    })
 
   $('.card').on "dragstart", (event) ->
     dataTransfer = event.originalEvent.dataTransfer
