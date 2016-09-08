@@ -5,7 +5,7 @@
 $(document).ready ->
   App.gameplayChannel = App.cable.subscriptions.create { channel: "GameplayChannel", room: "game1" },
     received: (data) ->
-      console.log('I got some data: ' + JSON.stringify(data['body']))
+      console.log('I got some data: ' + JSON.stringify(data))
 
   $('.card-slot').on "dragover", (event) ->
     event.preventDefault()
