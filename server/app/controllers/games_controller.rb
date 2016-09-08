@@ -1,11 +1,11 @@
 class GamesController < ApplicationController
   def index
-    @state = GameCreator.build
+    @state = GameCreator.last
   end
 
   def state
     respond_to :json
-    game = GameCreator.build
+    game = GameCreator.last
     render json: game.to_dto
   end
 end

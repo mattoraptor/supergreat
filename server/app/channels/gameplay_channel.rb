@@ -4,7 +4,7 @@ class GameplayChannel < ApplicationCable::Channel
   end
 
   def receive(data)
-    game = GameCreator.build
+    game = GameCreator.last
     ActionCable.server.broadcast("gameplay_#{params[:room]}", game.to_dto)
   end
 end

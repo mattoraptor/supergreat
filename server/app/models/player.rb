@@ -3,6 +3,6 @@ class Player < ApplicationRecord
     super(options.merge(only: :name))
   end
 
-  belongs_to :game
+  belongs_to :game, inverse_of: :players
   has_many :cards, class_name: 'PlayableCard', dependent: :destroy
 end

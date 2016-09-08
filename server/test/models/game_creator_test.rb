@@ -2,7 +2,7 @@ require 'test_helper'
 
 class GameCreatorTest < ActiveSupport::TestCase
   def setup
-    @test_obj = GameCreator.build
+    @test_obj = GameCreator.last
   end
 
   test 'new game state has four players' do
