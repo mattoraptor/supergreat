@@ -6,14 +6,12 @@ class Game < ApplicationRecord
   end
 
   def to_dto
-    serializable_hash(
-      include: {
-        players: {
-          only: [:name],
-          include: { cards: { only: [:name, :played_in] } }
-        }
-      },
-      except: [:id, :created_at, :updated_at]
-    )
+    dto = {}
+    dto['play_slots'] = [nil, nil, nil, nil]
+    dto['players'] = []
+    players.each do |player|
+      dto['players'].push player.to_dto
+    end
+    dto
   end
 end
