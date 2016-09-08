@@ -9,28 +9,28 @@ class GameTest < ActiveSupport::TestCase
     expected = {
       'players' => [
         { 'name' => 'player0', 'cards' => [
-          { 'name' => 'player0card0' },
-          { 'name' => 'player0card1' },
-          { 'name' => 'player0card2' },
-          { 'name' => 'player0card3' }
+          { 'name' => 'player0card0', 'played_in' => nil },
+          { 'name' => 'player0card1', 'played_in' => nil },
+          { 'name' => 'player0card2', 'played_in' => nil },
+          { 'name' => 'player0card3', 'played_in' => nil }
         ] },
         { 'name' => 'player1', 'cards' => [
-          { 'name' => 'player1card0' },
-          { 'name' => 'player1card1' },
-          { 'name' => 'player1card2' },
-          { 'name' => 'player1card3' }
+          { 'name' => 'player1card0', 'played_in' => nil },
+          { 'name' => 'player1card1', 'played_in' => nil },
+          { 'name' => 'player1card2', 'played_in' => nil },
+          { 'name' => 'player1card3', 'played_in' => nil }
         ] },
         { 'name' => 'player2', 'cards' => [
-          { 'name' => 'player2card0' },
-          { 'name' => 'player2card1' },
-          { 'name' => 'player2card2' },
-          { 'name' => 'player2card3' }
+          { 'name' => 'player2card0', 'played_in' => nil },
+          { 'name' => 'player2card1', 'played_in' => nil },
+          { 'name' => 'player2card2', 'played_in' => nil },
+          { 'name' => 'player2card3', 'played_in' => nil }
         ] },
         { 'name' => 'player3', 'cards' => [
-          { 'name' => 'player3card0' },
-          { 'name' => 'player3card1' },
-          { 'name' => 'player3card2' },
-          { 'name' => 'player3card3' }
+          { 'name' => 'player3card0', 'played_in' => nil },
+          { 'name' => 'player3card1', 'played_in' => nil },
+          { 'name' => 'player3card2', 'played_in' => nil },
+          { 'name' => 'player3card3', 'played_in' => nil }
         ] }
       ]
     }
