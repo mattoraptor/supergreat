@@ -8,7 +8,7 @@ class Player < ApplicationRecord
     pdto['name'] = name
     pdto['cards'] = []
     cards.each do |card|
-      pdto['cards'].push card.to_dto
+      pdto['cards'].push card.played_in ? nil : card.to_dto
     end
     pdto
   end

@@ -44,7 +44,11 @@ class GameTest < ActiveSupport::TestCase
     result = @test_obj.card_in_slot 1
     expected = { 'name' => 'player1card2' }
     assert_equal expected, result
-    dto = @test_obj.to_dto
-    assert_equal 'player1card2', dto['play_slots'][1]['name']
+    assert_equal 'player1card2', @test_obj.to_dto['play_slots'][1]['name']
+  end
+
+  test 'playing a card removes it from the players hand' do
+    @test_obj.play_card(2, 3, 2)
+    assert_equal nil, @test_obj.to_dto['players'][2]['cards'][3]
   end
 end
