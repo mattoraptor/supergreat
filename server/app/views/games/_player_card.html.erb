@@ -1,3 +1,7 @@
+<% if @state.players[player].cards[card] %>
 <div id=<%= "p" + player.to_s + "card" + card.to_s %> class="card" draggable="true" data-player=<%=player%> data-card=<%=card%>>
 	<%= @state.players[player].cards[card].name %>
 </div>
+<% else %>
+<div class="card-slot"></div> 
+<% end %>

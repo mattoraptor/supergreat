@@ -2,7 +2,9 @@ class Game < ApplicationRecord
   has_many :players, dependent: :destroy
 
   def play_card(player_id, card_id, slot_id)
-    players[player_id.to_i].cards[card_id.to_i].played_in = slot_id.to_i
+    card = players[player_id.to_i].cards[card_id.to_i]
+    card.played_in = slot_id.to_i
+    card.save
   end
 
   def to_dto
