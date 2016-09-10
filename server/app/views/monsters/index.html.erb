@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Monsters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Health</th>
+      <th>Attack</th>
+      <th>Defense</th>
+      <th>Effect</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody id="cardList">
+    <% @monsters.each do |monster| %>
+      <tr>
+        <td><%= monster.name %></td>
+        <td><%= monster.health %></td>
+        <td><%= monster.attack %></td>
+        <td><%= monster.defense %></td>
+        <td><%= monster.effect %></td>
+        <td><%= link_to 'Show', monster %>
+            <%= link_to 'Edit', edit_monster_path(monster) %>
+            <%= link_to 'Destroy', monster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Monster', new_monster_path %>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :cards
+  resources :monsters
   get 'games/index'
   get 'games/state'
   get 'games/play_card'
